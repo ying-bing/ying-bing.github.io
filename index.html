@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>颖宝,元旦快乐</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<style>
+a{
+text-decoration: none;
+font-weight:bold;
+font-size:20px
+}
+.box{
+	-webkit-animation:playBox 1.0s infinite;
+}
+@-webkit-keyframes playBox{
+
+
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+
+		<div id="code">
+
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*那天</span><br />
+			<span class="space"/><span class="comments">*2019—08-27.</span><br />
+			<span class="space"/><span class="comments">*第一次加上微信好友</span><br />
+			<span class="space"/><span class="comments">*我们的故事开始了...</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">於帮兵</span><br />
+			Girl name = <span class="keyword">陈颖</span><br />
+			<span class="keyword">2019-11-22</span> The first time they met;<br />
+			<span class="keyword">2019-12-15</span> They hold hands, warm and beautiful;<br />
+			<span class="keyword">2019-12-17</span> They kissed, They're together, Thank you, god;<br />
+			<span class="keyword">2019-12-25</span> They applaud for love for the first time;<br />
+			
+			<span class="comments">// There will be many wonderful days in the future. </span><br />
+			
+			This is a timer<br />
+			<span class="comments">// Can record the time they together.</span><br />
+			<span class="comments">// Both wind and snow all over the sky.</span><br />
+			<span class="comments">// Regardless of the ups and downs of the future</span><br />
+			<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
+			<span class="placeholder"/><span class="comments">// Whether it is right now</span><br />
+			<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
+			<span class="placeholder"/>The boy has but one dream;<br />
+			<span class="comments">// The boy wants the girl could well have been happy.</span><br />
+			<br>
+			<br>
+			I want to say:<br />
+			Baby, I want to stay with you forever;<br />
+			
+			<br>
+			<br>
+			<a href="./image3D/index.htm">元旦快乐，宝宝</a>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					这是我们在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					愿直到永远。<br/>
+					<div class="signature">- 兵</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2019, 11, 17);
+together.setHours(20);
+together.setMinutes(31);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
